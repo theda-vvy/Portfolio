@@ -1,0 +1,104 @@
+{
+  "cover": {
+    "src": "/projects/5fourteen/cover.webp",
+    "width": 1311,
+    "height": 1851,
+    "source": "5fourteen.pdf",
+    "page": 60,
+    "crop": [
+      0.665,
+      0.155,
+      0.95,
+      0.87
+    ]
+  },
+  "hero": {
+    "src": "/projects/5fourteen/hero.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "5fourteen.pdf",
+    "page": 47,
+    "crop": null
+  },
+  "identity": {
+    "src": "/projects/5fourteen/identity.webp",
+    "width": 1485,
+    "height": 1266,
+    "source": "5fourteen.pdf",
+    "page": 16,
+    "crop": [
+      0.455,
+      0.14,
+      0.95,
+      0.89
+    ]
+  },
+  "pattern": {
+    "src": "/projects/5fourteen/pattern.webp",
+    "width": 1695,
+    "height": 937,
+    "source": "5fourteen.pdf",
+    "page": 31,
+    "crop": [
+      0.385,
+      0.355,
+      0.95,
+      0.91
+    ]
+  },
+  "colour": {
+    "src": "/projects/5fourteen/colour.webp",
+    "width": 2000,
+    "height": 825,
+    "source": "5fourteen.pdf",
+    "page": 24,
+    "crop": [
+      0.177,
+      0.315,
+      0.975,
+      0.9
+    ]
+  },
+  "campaign": {
+    "src": "/projects/5fourteen/campaign.webp",
+    "width": 2000,
+    "height": 914,
+    "source": "5fourteen.pdf",
+    "page": 44,
+    "crop": [
+      0.035,
+      0.13,
+      0.965,
+      0.885
+    ]
+  },
+  "books": {
+    "src": "/projects/5fourteen/books.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "5fourteen.pdf",
+    "page": 55,
+    "crop": null
+  },
+  "apparel": {
+    "src": "/projects/5fourteen/apparel.webp",
+    "width": 2000,
+    "height": 909,
+    "source": "5fourteen.pdf",
+    "page": 60,
+    "crop": [
+      0.065,
+      0.155,
+      0.95,
+      0.87
+    ]
+  },
+  "billboard": {
+    "src": "/projects/5fourteen/billboard.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "5fourteen.pdf",
+    "page": 63,
+    "crop": null
+  }
+}

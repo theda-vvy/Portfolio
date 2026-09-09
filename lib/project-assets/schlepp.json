@@ -1,0 +1,132 @@
+{
+  "cover": {
+    "src": "/projects/schlepp/cover.webp",
+    "width": 2000,
+    "height": 890,
+    "source": "Schlepp.pdf",
+    "page": 86,
+    "crop": [
+      0.08,
+      0.28,
+      0.92,
+      0.945
+    ]
+  },
+  "hero": {
+    "src": "/projects/schlepp/hero.webp",
+    "width": 2000,
+    "height": 998,
+    "source": "Schlepp.pdf",
+    "page": 87,
+    "crop": [
+      0.08,
+      0.2,
+      0.92,
+      0.945
+    ]
+  },
+  "mark": {
+    "src": "/projects/schlepp/mark.webp",
+    "width": 1377,
+    "height": 1224,
+    "source": "Schlepp.pdf",
+    "page": 16,
+    "crop": [
+      0.466,
+      0.137,
+      0.925,
+      0.862
+    ]
+  },
+  "identity": {
+    "src": "/projects/schlepp/identity.webp",
+    "width": 2000,
+    "height": 700,
+    "source": "Schlepp.pdf",
+    "page": 19,
+    "crop": [
+      0.075,
+      0.4,
+      0.895,
+      0.91
+    ]
+  },
+  "architecture": {
+    "src": "/projects/schlepp/architecture.webp",
+    "width": 2000,
+    "height": 527,
+    "source": "Schlepp.pdf",
+    "page": 44,
+    "crop": [
+      0.075,
+      0.385,
+      0.94,
+      0.79
+    ]
+  },
+  "campaign": {
+    "src": "/projects/schlepp/campaign.webp",
+    "width": 2000,
+    "height": 874,
+    "source": "Schlepp.pdf",
+    "page": 77,
+    "crop": [
+      0.075,
+      0.245,
+      0.925,
+      0.905
+    ]
+  },
+  "nook": {
+    "src": "/projects/schlepp/nook.webp",
+    "width": 2000,
+    "height": 884,
+    "source": "Schlepp.pdf",
+    "page": 52,
+    "crop": [
+      0.08,
+      0.285,
+      0.92,
+      0.945
+    ]
+  },
+  "loadways": {
+    "src": "/projects/schlepp/loadways.webp",
+    "width": 2000,
+    "height": 857,
+    "source": "Schlepp.pdf",
+    "page": 64,
+    "crop": [
+      0.08,
+      0.285,
+      0.92,
+      0.925
+    ]
+  },
+  "brochure": {
+    "src": "/projects/schlepp/brochure.webp",
+    "width": 2000,
+    "height": 978,
+    "source": "Schlepp.pdf",
+    "page": 81,
+    "crop": [
+      0.08,
+      0.215,
+      0.92,
+      0.945
+    ]
+  },
+  "tote": {
+    "src": "/projects/schlepp/tote.webp",
+    "width": 2000,
+    "height": 931,
+    "source": "Schlepp.pdf",
+    "page": 93,
+    "crop": [
+      0.08,
+      0.25,
+      0.92,
+      0.945
+    ]
+  }
+}
