@@ -15,7 +15,7 @@ export function SiteHeader() {
       <SheetContent side="top" className="menu-panel" showCloseButton={false}>
         <div className="menu-top"><span className="wordmark">{founder.name}</span><SheetClose className="menu-trigger">Close <X size={20} aria-hidden="true" /></SheetClose></div>
         <SheetTitle className="sr-only">Navigation</SheetTitle>
-        <SheetDescription className="sr-only">Explore my work, approach, and contact details.</SheetDescription>
+        <SheetDescription className="sr-only">Explore my work, musings, approach, and contact details.</SheetDescription>
         <nav className="menu-links" aria-label="Main navigation">
           {navigation.map(({ label, href }, i) => <Link key={label} href={href} onClick={() => setOpen(false)}><span className="menu-index">0{i + 1}</span>{label}<span className="menu-arrow" aria-hidden="true">↗</span></Link>)}
         </nav>
@@ -27,7 +27,7 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return <footer className="site-footer">
-    <div className="footer-top"><p className="eyebrow">Start a conversation</p><Link className="contact-title" href="/contact">Tell me<br /><em>what changed.</em><span aria-hidden="true">↗</span></Link><p className="footer-invitation">{content.contact.body}</p><a className="text-link footer-email" href={`mailto:${founder.email}`}>{founder.email}<span aria-hidden="true">↗</span></a></div>
+    <div className="footer-top"><p className="eyebrow">Start a conversation</p><Link className="contact-title" href="/contact">Tell me<br /><em>what you’re building.</em><span aria-hidden="true">↗</span></Link><p className="footer-invitation">{content.contact.body}</p><a className="text-link footer-email" href={`mailto:${founder.email}`}>{founder.email}<span aria-hidden="true">↗</span></a></div>
     <div className="footer-bottom"><Link href="/" className="wordmark">{founder.name}</Link><nav aria-label="Footer navigation">{navigation.map(({ label, href }) => <Link href={href} key={label}>{label}</Link>)}</nav><span className="footer-location">Lagos, Nigeria · {new Date().getFullYear()}</span></div>
   </footer>;
 }

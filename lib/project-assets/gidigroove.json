@@ -1,0 +1,78 @@
+{
+  "cover": {
+    "src": "/projects/gidigroove/cover.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "Gidigroove.pdf",
+    "page": 41,
+    "crop": null
+  },
+  "hero": {
+    "src": "/projects/gidigroove/hero.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "Gidigroove.pdf",
+    "page": 40,
+    "crop": null
+  },
+  "identity": {
+    "src": "/projects/gidigroove/identity.webp",
+    "width": 2000,
+    "height": 1151,
+    "source": "Gidigroove.pdf",
+    "page": 21,
+    "crop": [
+      0.12,
+      0.08,
+      0.98,
+      0.96
+    ]
+  },
+  "illustration": {
+    "src": "/projects/gidigroove/illustration.webp",
+    "width": 1965,
+    "height": 1604,
+    "source": "Gidigroove.pdf",
+    "page": 34,
+    "crop": [
+      0.325,
+      0.025,
+      0.98,
+      0.975
+    ]
+  },
+  "pattern": {
+    "src": "/projects/gidigroove/pattern.webp",
+    "width": 1965,
+    "height": 1604,
+    "source": "Gidigroove.pdf",
+    "page": 31,
+    "crop": [
+      0.325,
+      0.025,
+      0.98,
+      0.975
+    ]
+  },
+  "campaign": {
+    "src": "/projects/gidigroove/campaign.webp",
+    "width": 2000,
+    "height": 1226,
+    "source": "Gidigroove.pdf",
+    "page": 43,
+    "crop": [
+      0.15,
+      0.1,
+      0.93,
+      0.95
+    ]
+  },
+  "digital": {
+    "src": "/projects/gidigroove/digital.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "Gidigroove.pdf",
+    "page": 48,
+    "crop": null
+  }
+}

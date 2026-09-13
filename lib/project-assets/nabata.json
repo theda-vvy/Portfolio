@@ -1,0 +1,73 @@
+{
+  "cover": {
+    "src": "/projects/nabata/cover.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "Nabata.pdf",
+    "page": 41,
+    "crop": null
+  },
+  "hero": {
+    "src": "/projects/nabata/hero.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "Nabata.pdf",
+    "page": 47,
+    "crop": null
+  },
+  "identity": {
+    "src": "/projects/nabata/identity.webp",
+    "width": 1350,
+    "height": 1215,
+    "source": "Nabata.pdf",
+    "page": 20,
+    "crop": [
+      0.502,
+      0.135,
+      0.952,
+      0.855
+    ]
+  },
+  "pattern": {
+    "src": "/projects/nabata/pattern.webp",
+    "width": 1635,
+    "height": 1688,
+    "source": "Nabata.pdf",
+    "page": 28,
+    "crop": [
+      0.455,
+      0,
+      1,
+      1
+    ]
+  },
+  "fold": {
+    "src": "/projects/nabata/fold.webp",
+    "width": 1635,
+    "height": 1688,
+    "source": "Nabata.pdf",
+    "page": 29,
+    "crop": [
+      0.455,
+      0,
+      1,
+      1
+    ]
+  },
+  "editorial": {
+    "src": "/projects/nabata/editorial.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "Nabata.pdf",
+    "page": 38,
+    "crop": null
+  },
+  "campaign": {
+    "src": "/projects/nabata/campaign.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "Nabata.pdf",
+    "page": 45,
+    "crop": null
+  }
+}

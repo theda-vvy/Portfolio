@@ -1,0 +1,42 @@
+{
+  "cover": {
+    "src": "/projects/woma/cover.webp",
+    "width": 1600,
+    "height": 1200
+  },
+  "homepage": {
+    "src": "/projects/woma/homepage.webp",
+    "width": 1600,
+    "height": 9776
+  },
+  "interiors": {
+    "src": "/projects/woma/interiors.webp",
+    "width": 1600,
+    "height": 4169
+  },
+  "furniture": {
+    "src": "/projects/woma/furniture.webp",
+    "width": 1600,
+    "height": 4298
+  },
+  "art": {
+    "src": "/projects/woma/art.webp",
+    "width": 1600,
+    "height": 3519
+  },
+  "project": {
+    "src": "/projects/woma/project.webp",
+    "width": 1600,
+    "height": 5869
+  },
+  "about": {
+    "src": "/projects/woma/about.webp",
+    "width": 1600,
+    "height": 4622
+  },
+  "contact": {
+    "src": "/projects/woma/contact.webp",
+    "width": 1600,
+    "height": 1960
+  }
+}

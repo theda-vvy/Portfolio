@@ -1,5 +1,5 @@
 """Render selected artwork from the owner's original PDFs; source documents stay untouched."""
-import json, subprocess
+import json, subprocess, sys
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
@@ -31,6 +31,8 @@ ASSETS = {
  ]),
 }
 
+ASSETS.update({'punchin': ('Punchin Update.pdf', [('cover', 28, None), ('hero', 24, None), ('identity', 13, (0.09, 0.1, 0.96, 0.94)), ('mascot', 19, (0.32, 0.04, 0.98, 0.97)), ('pattern', 20, (0.32, 0.04, 0.98, 0.97)), ('campaign', 32, None), ('posters', 34, None)]), 'gidigroove': ('Gidigroove.pdf', [('cover', 41, None), ('hero', 40, None), ('identity', 21, (0.12, 0.08, 0.98, 0.96)), ('illustration', 34, (0.325, 0.025, 0.98, 0.975)), ('pattern', 31, (0.325, 0.025, 0.98, 0.975)), ('campaign', 43, (0.15, 0.1, 0.93, 0.95)), ('digital', 48, None)]), 'wattflex': ('WATTFLEX.pdf', [('cover', 43, None), ('hero', 47, (0.073, 0.127, 0.927, 0.873)), ('identity', 19, (0.26, 0.25, 0.94, 0.94)), ('pattern', 25, (0.4, 0.055, 0.98, 0.95)), ('packaging', 31, (0.315, 0.065, 0.965, 0.94)), ('campaign', 48, None), ('tote', 39, (0.45, 0, 1, 1))]), 'nabata': ('Nabata.pdf', [('cover', 41, None), ('hero', 47, None), ('identity', 20, (0.502, 0.135, 0.952, 0.855)), ('pattern', 28, (0.455, 0, 1, 1)), ('fold', 29, (0.455, 0, 1, 1)), ('editorial', 38, None), ('campaign', 45, None)])})
+
 def project(job):
  slug,(filename,items)=job
  out=PUBLIC/slug;out.mkdir(parents=True,exist_ok=True)
@@ -49,4 +51,4 @@ def project(job):
  (ROOT/'lib/project-assets').mkdir(exist_ok=True)
  (ROOT/'lib/project-assets'/f'{slug}.json').write_text(json.dumps(records,indent=2)+'\n')
  print(slug,len(records),'assets exported',flush=True)
-with ThreadPoolExecutor(max_workers=3) as executor: list(executor.map(project,ASSETS.items()))
+with ThreadPoolExecutor(max_workers=3) as executor: list(executor.map(project,((slug, data) for slug, data in ASSETS.items() if not sys.argv[1:] or slug in sys.argv[1:])))

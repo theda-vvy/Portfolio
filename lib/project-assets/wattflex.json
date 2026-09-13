@@ -1,0 +1,83 @@
+{
+  "cover": {
+    "src": "/projects/wattflex/cover.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "WATTFLEX.pdf",
+    "page": 43,
+    "crop": null
+  },
+  "hero": {
+    "src": "/projects/wattflex/hero.webp",
+    "width": 2000,
+    "height": 984,
+    "source": "WATTFLEX.pdf",
+    "page": 47,
+    "crop": [
+      0.073,
+      0.127,
+      0.927,
+      0.873
+    ]
+  },
+  "identity": {
+    "src": "/projects/wattflex/identity.webp",
+    "width": 2000,
+    "height": 1142,
+    "source": "WATTFLEX.pdf",
+    "page": 19,
+    "crop": [
+      0.26,
+      0.25,
+      0.94,
+      0.94
+    ]
+  },
+  "pattern": {
+    "src": "/projects/wattflex/pattern.webp",
+    "width": 1740,
+    "height": 1511,
+    "source": "WATTFLEX.pdf",
+    "page": 25,
+    "crop": [
+      0.4,
+      0.055,
+      0.98,
+      0.95
+    ]
+  },
+  "packaging": {
+    "src": "/projects/wattflex/packaging.webp",
+    "width": 1950,
+    "height": 1477,
+    "source": "WATTFLEX.pdf",
+    "page": 31,
+    "crop": [
+      0.315,
+      0.065,
+      0.965,
+      0.94
+    ]
+  },
+  "campaign": {
+    "src": "/projects/wattflex/campaign.webp",
+    "width": 2000,
+    "height": 1125,
+    "source": "WATTFLEX.pdf",
+    "page": 48,
+    "crop": null
+  },
+  "tote": {
+    "src": "/projects/wattflex/tote.webp",
+    "width": 1650,
+    "height": 1688,
+    "source": "WATTFLEX.pdf",
+    "page": 39,
+    "crop": [
+      0.45,
+      0,
+      1,
+      1
+    ]
+  }
+}
