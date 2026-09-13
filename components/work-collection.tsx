@@ -1,5 +1,7 @@
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 'use client';
+import { LinkArrow } from '@/components/link-arrow';
+
 
 import type { Project } from '@/lib/portfolio';
 import { ProjectCover } from '@/components/project-cover';
@@ -22,7 +24,7 @@ export function WorkCollection({ projects }: { projects: Project[] }) {
         {matching.length ? <section aria-label={`${category.label} projects`} className="archive-grid">
           {matching.map(project => <a className="project-card" key={project.slug} href={`/work/${project.slug}`} aria-label={`View ${project.title} case study`}>
             <ProjectCover project={project} />
-            <div className="project-caption"><div><h2>{project.title}</h2><p className="project-summary">{project.summary}</p><p>{project.category}</p></div><span className="round-arrow" aria-hidden="true">↗</span></div>
+            <div className="project-caption"><div><h2>{project.title}</h2><p className="project-summary">{project.summary}</p><p>{project.category}</p></div><span className="round-arrow" aria-hidden="true"><LinkArrow /></span></div>
           </a>)}
         </section> : <section className="work-category-empty"><h2>{category.label}</h2><p>No projects published here yet.</p></section>}
       </TabsContent>;

@@ -1,3 +1,4 @@
+import { LinkArrow } from '@/components/link-arrow';
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 import { musings, readingTime } from '@/lib/musings';
 import { pageMetadata } from '@/lib/metadata';
@@ -36,7 +37,7 @@ export default function MusingsPage() {
               <p className="musing-excerpt">{post.excerpt}</p>
             </div>
             <span className="round-arrow" aria-hidden="true">
-              ↗
+              <LinkArrow />
             </span>
           </a>
         ))}

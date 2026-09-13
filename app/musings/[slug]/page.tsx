@@ -1,3 +1,4 @@
+import { LinkArrow } from '@/components/link-arrow';
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 import { notFound } from 'next/navigation';
 import { musings, readingTime } from '@/lib/musings';
@@ -48,7 +49,7 @@ export default async function MusingPage({
       </article>
       <a href={`/musings/${next.slug}`} className="article-next">
         <span className="eyebrow">Keep reading</span>
-        <span>{next.title} ↗</span>
+        <span>{next.title} <LinkArrow /></span>
       </a>
     </main>
   );

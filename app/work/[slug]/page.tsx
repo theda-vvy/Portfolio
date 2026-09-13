@@ -1,3 +1,4 @@
+import { LinkArrow } from '@/components/link-arrow';
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 import { notFound, permanentRedirect } from 'next/navigation';
 import { projects, publishedProjects, isProjectReady, findProject } from '@/lib/portfolio';
@@ -57,6 +58,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     </section>
     {project.gallery && <ProjectGallery title={project.title} media={project.gallery} />}
     <section className="case-outcome"><p className="eyebrow">04 / What changed</p><div><h2>A system to<br /><em>carry forward.</em></h2><p className="case-copy">{story.outcome}</p><div className="credits"><h3 className="eyebrow">Credits & project status</h3>{project.credits.map(credit => <p key={credit}>{credit}</p>)}<p>{project.projectStatus}</p></div></div></section>
-    {next && next.slug !== project.slug && <a className="next-project" href={`/work/${next.slug}`}><span className="eyebrow">Next project</span><span className="next-title">{next.title}<span aria-hidden="true">↗</span></span></a>}
+    {next && next.slug !== project.slug && <a className="next-project" href={`/work/${next.slug}`}><span className="eyebrow">Next project</span><span className="next-title">{next.title}<span aria-hidden="true"><LinkArrow /></span></span></a>}
   </main>;
 }

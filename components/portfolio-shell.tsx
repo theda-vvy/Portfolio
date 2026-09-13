@@ -1,5 +1,7 @@
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 'use client';
+import { LinkArrow } from '@/components/link-arrow';
+
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Sheet, SheetContent, SheetTitle, SheetDescription, SheetTrigger, SheetClose } from '@/components/ui/sheet';
@@ -17,9 +19,9 @@ export function SiteHeader() {
         <SheetTitle className="sr-only">Navigation</SheetTitle>
         <SheetDescription className="sr-only">Explore my work, musings, approach, and contact details.</SheetDescription>
         <nav className="menu-links" aria-label="Main navigation">
-          {navigation.map(({ label, href }, i) => <a key={label} href={href} onClick={() => setOpen(false)}><span className="menu-index">0{i + 1}</span>{label}<span className="menu-arrow" aria-hidden="true">↗</span></a>)}
+          {navigation.map(({ label, href }, i) => <a key={label} href={href} onClick={() => setOpen(false)}><span className="menu-index">0{i + 1}</span>{label}<span className="menu-arrow" aria-hidden="true"><LinkArrow /></span></a>)}
         </nav>
-        <div className="menu-bottom"><p>Lagos, Nigeria.<br />Working internationally.</p><a className="text-link" href={`mailto:${founder.email}`}>{founder.email}<span aria-hidden="true">↗</span></a></div>
+        <div className="menu-bottom"><p>Lagos, Nigeria.<br />Working internationally.</p><a className="text-link" href={`mailto:${founder.email}`}>{founder.email}<span aria-hidden="true"><LinkArrow /></span></a></div>
       </SheetContent>
     </Sheet>
   </header>;
@@ -27,7 +29,7 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return <footer className="site-footer">
-    <div className="footer-top"><p className="eyebrow">Start a conversation</p><a className="contact-title" href="/contact">Tell me<br /><em>what you’re building.</em><span aria-hidden="true">↗</span></a><p className="footer-invitation">{content.contact.body}</p><a className="text-link footer-email" href={`mailto:${founder.email}`}>{founder.email}<span aria-hidden="true">↗</span></a></div>
+    <div className="footer-top"><p className="eyebrow">Start a conversation</p><a className="contact-title" href="/contact">Tell me<br /><em>what you’re building.</em><span aria-hidden="true"><LinkArrow /></span></a><p className="footer-invitation">{content.contact.body}</p><a className="text-link footer-email" href={`mailto:${founder.email}`}>{founder.email}<span aria-hidden="true"><LinkArrow /></span></a></div>
     <div className="footer-bottom"><a href="/" className="wordmark">{founder.name}</a><nav aria-label="Footer navigation">{navigation.map(({ label, href }) => <a href={href} key={label}>{label}</a>)}</nav><span className="footer-location">Lagos, Nigeria · {new Date().getFullYear()}</span></div>
   </footer>;
 }

@@ -1,3 +1,4 @@
+import { LinkArrow } from '@/components/link-arrow';
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 import homepageFrames from '@/lib/project-assets/homepage-frame.json';
 import { featuredProjects } from '@/lib/portfolio';
@@ -80,7 +81,7 @@ export default function Home() {
                 how to make the next step feel right.
               </p>
               <a href="/contact" className="pill-link">
-                Let’s talk it through <span aria-hidden="true">↗</span>
+                Let’s talk it through <span aria-hidden="true"><LinkArrow /></span>
               </a>
             </div>
           </div>
@@ -153,7 +154,7 @@ export default function Home() {
             ))}
           </ol>
           <a href="/about#approach" className="pill-link" data-reveal>
-            More about working together <span aria-hidden="true">↗</span>
+            More about working together <span aria-hidden="true"><LinkArrow /></span>
           </a>
         </section>
         <section
@@ -189,7 +190,7 @@ export default function Home() {
                       </p>
                     </div>
                     <span className="round-arrow" aria-hidden="true">
-                      ↗
+                      <LinkArrow />
                     </span>
                   </div>
                 </a>
@@ -209,13 +210,13 @@ export default function Home() {
                 </EmptyDescription>
               </EmptyHeader>
               <a className="text-link" href="/contact">
-                Start a conversation <span aria-hidden="true">↗</span>
+                Start a conversation <span aria-hidden="true"><LinkArrow /></span>
               </a>
             </Empty>
           )}
           <div className="all-work-action">
             <a href="/work" className="pill-link">
-              Show all work <span aria-hidden="true">↗</span>
+              Show all work <span aria-hidden="true"><LinkArrow /></span>
             </a>
           </div>
         </section>
