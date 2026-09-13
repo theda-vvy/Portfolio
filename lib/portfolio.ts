@@ -583,7 +583,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    ...shared, slug: 'woma', aliases: [], number: '08', title: 'WOMA', workCategory: 'website',
+    ...shared, status: 'draft', slug: 'woma', aliases: [], number: '08', title: 'WOMA', workCategory: 'website',
     summary: 'A considered home for interiors, furniture and art.', category: 'Interiors, furniture & art', theme: 'pink',
     role: 'Website design', collaboration: '', credits: ['Oluwaseyi David'],
     disciplines: ['Website design', 'UI design'], projectStatus: 'Website design presentation. Screens show proposed layouts; launch status is unconfirmed.',
