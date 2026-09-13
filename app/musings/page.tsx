@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 import { musings, readingTime } from '@/lib/musings';
 import { pageMetadata } from '@/lib/metadata';
 export const metadata = pageMetadata(
@@ -22,7 +22,7 @@ export default function MusingsPage() {
       </header>
       <section className="musing-list" aria-label="Articles">
         {musings.map((post, index) => (
-          <Link
+          <a
             href={`/musings/${post.slug}`}
             key={post.slug}
             className="musing-card"
@@ -38,7 +38,7 @@ export default function MusingsPage() {
             <span className="round-arrow" aria-hidden="true">
               ↗
             </span>
-          </Link>
+          </a>
         ))}
       </section>
     </main>

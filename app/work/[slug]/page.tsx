@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 import { notFound, permanentRedirect } from 'next/navigation';
 import { projects, publishedProjects, isProjectReady, findProject } from '@/lib/portfolio';
 import { ProjectCover, ProjectFigure } from '@/components/project-cover';
@@ -26,7 +26,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const next = publishedProjects[(publishedProjects.findIndex(item => item.slug === project.slug) + 1) % publishedProjects.length];
   return <main id="main" className={`case-page ${project.workCategory === 'website' ? 'website-case' : ''}`}>
     <section className="case-intro">
-      <div className="case-label"><Link href="/work" className="text-link">← All work</Link><span className="eyebrow">Case study / {project.number}</span></div>
+      <div className="case-label"><a href="/work" className="text-link">← All work</a><span className="eyebrow">Case study / {project.number}</span></div>
       <div><p className="eyebrow">{project.category}</p><h1>{project.title}</h1><p className="case-deck">{project.summary}</p></div>
     </section>
     {!project.hideHero && <div className="case-hero"><ProjectCover project={project} large /></div>}
@@ -57,6 +57,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     </section>
     {project.gallery && <ProjectGallery title={project.title} media={project.gallery} />}
     <section className="case-outcome"><p className="eyebrow">04 / What changed</p><div><h2>A system to<br /><em>carry forward.</em></h2><p className="case-copy">{story.outcome}</p><div className="credits"><h3 className="eyebrow">Credits & project status</h3>{project.credits.map(credit => <p key={credit}>{credit}</p>)}<p>{project.projectStatus}</p></div></div></section>
-    {next && next.slug !== project.slug && <Link className="next-project" href={`/work/${next.slug}`}><span className="eyebrow">Next project</span><span className="next-title">{next.title}<span aria-hidden="true">↗</span></span></Link>}
+    {next && next.slug !== project.slug && <a className="next-project" href={`/work/${next.slug}`}><span className="eyebrow">Next project</span><span className="next-title">{next.title}<span aria-hidden="true">↗</span></span></a>}
   </main>;
 }

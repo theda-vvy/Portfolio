@@ -1,6 +1,6 @@
+/* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 'use client';
 
-import Link from 'next/link';
 import type { Project } from '@/lib/portfolio';
 import { ProjectCover } from '@/components/project-cover';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
@@ -20,10 +20,10 @@ export function WorkCollection({ projects }: { projects: Project[] }) {
       const matching = projects.filter(project => (project.workCategory ?? 'brand') === category.id);
       return <TabsContent key={category.id} value={category.id}>
         {matching.length ? <section aria-label={`${category.label} projects`} className="archive-grid">
-          {matching.map(project => <Link className="project-card" key={project.slug} href={`/work/${project.slug}`} aria-label={`View ${project.title} case study`}>
+          {matching.map(project => <a className="project-card" key={project.slug} href={`/work/${project.slug}`} aria-label={`View ${project.title} case study`}>
             <ProjectCover project={project} />
             <div className="project-caption"><div><h2>{project.title}</h2><p className="project-summary">{project.summary}</p><p>{project.category}</p></div><span className="round-arrow" aria-hidden="true">↗</span></div>
-          </Link>)}
+          </a>)}
         </section> : <section className="work-category-empty"><h2>{category.label}</h2><p>No projects published here yet.</p></section>}
       </TabsContent>;
     })}

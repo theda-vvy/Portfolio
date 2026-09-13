@@ -1,4 +1,4 @@
-import Link from 'next/link';
+/* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 import { notFound } from 'next/navigation';
 import { musings, readingTime } from '@/lib/musings';
 import { founder } from '@/lib/site-content';
@@ -28,9 +28,9 @@ export default async function MusingPage({
   const next = musings[(musings.indexOf(post) + 1) % musings.length];
   return (
     <main id="main" className="article-page">
-      <Link href="/musings" className="text-link">
+      <a href="/musings" className="text-link">
         ← All musings
-      </Link>
+      </a>
       <article>
         <header className="article-heading">
           <p className="eyebrow">
@@ -46,10 +46,10 @@ export default async function MusingPage({
           ))}
         </div>
       </article>
-      <Link href={`/musings/${next.slug}`} className="article-next">
+      <a href={`/musings/${next.slug}`} className="article-next">
         <span className="eyebrow">Keep reading</span>
         <span>{next.title} ↗</span>
-      </Link>
+      </a>
     </main>
   );
 }

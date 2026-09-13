@@ -1,5 +1,5 @@
+/* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 import homepageFrames from '@/lib/project-assets/homepage-frame.json';
-import Link from 'next/link';
 import { featuredProjects } from '@/lib/portfolio';
 import { ProjectCover } from '@/components/project-cover';
 import { Empty, EmptyHeader, EmptyDescription } from '@/components/ui/empty';
@@ -79,9 +79,9 @@ export default function Home() {
                 We’ll work out what needs to change, what’s worth keeping, and
                 how to make the next step feel right.
               </p>
-              <Link href="/contact" className="pill-link">
+              <a href="/contact" className="pill-link">
                 Let’s talk it through <span aria-hidden="true">↗</span>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="help-scenarios" data-reveal>
@@ -152,9 +152,9 @@ export default function Home() {
               </li>
             ))}
           </ol>
-          <Link href="/about#approach" className="pill-link" data-reveal>
+          <a href="/about#approach" className="pill-link" data-reveal>
             More about working together <span aria-hidden="true">↗</span>
-          </Link>
+          </a>
         </section>
         <section
           id="work"
@@ -171,7 +171,7 @@ export default function Home() {
           {featuredProjects.length > 0 ? (
             <div className="project-grid">
               {featuredProjects.map((project, index) => (
-                <Link
+                <a
                   href={`/work/${project.slug}`}
                   key={project.slug}
                   aria-label={`View ${project.title} case study`}
@@ -192,7 +192,7 @@ export default function Home() {
                       ↗
                     </span>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           ) : (
@@ -208,15 +208,15 @@ export default function Home() {
                   become clearer, get in touch.
                 </EmptyDescription>
               </EmptyHeader>
-              <Link className="text-link" href="/contact">
+              <a className="text-link" href="/contact">
                 Start a conversation <span aria-hidden="true">↗</span>
-              </Link>
+              </a>
             </Empty>
           )}
           <div className="all-work-action">
-            <Link href="/work" className="pill-link">
+            <a href="/work" className="pill-link">
               Show all work <span aria-hidden="true">↗</span>
-            </Link>
+            </a>
           </div>
         </section>
       </HomeMotion>

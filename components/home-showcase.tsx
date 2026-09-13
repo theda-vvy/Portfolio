@@ -1,6 +1,6 @@
+/* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 type Snapshot = { src: string; width: number; height: number };
@@ -51,10 +51,10 @@ export function HomeShowcase({ slides }: { slides: Snapshot[] }) {
   }, [visible, reduced, focused, foreground, slides.length]);
   if (!slides.length) return null;
   return <div ref={root} className="showcase-wrap">
-    <Link href="/work" className="home-showcase snapshot-reel" aria-label="View all work" onFocus={(event) => setFocused(event.currentTarget.matches(':focus-visible'))} onBlur={() => setFocused(false)}>
+    <a href="/work" className="home-showcase snapshot-reel" aria-label="View all work" onFocus={(event) => setFocused(event.currentTarget.matches(':focus-visible'))} onBlur={() => setFocused(false)}>
       <div className="snapshot-stage" aria-hidden="true">
         {slides.map((slide, index) => <img ref={(image) => { if (image?.complete && image.naturalWidth > 0) loaded.current.add(index); }} key={slide.src} src={slide.src} alt="" width={slide.width} height={slide.height} loading="eager" decoding="async" fetchPriority={index === 0 ? 'high' : 'low'} onLoad={() => loaded.current.add(index)} className={active === index ? 'snapshot is-active' : 'snapshot'} />)}
       </div>
-    </Link>
+    </a>
   </div>;
 }
