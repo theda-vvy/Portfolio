@@ -7,7 +7,7 @@ export const founder = {
   country: 'Nigeria',
   role: 'Independent Designer and Strategist',
   // Verified URL of the existing Sites deployment. This revision remains local.
-  siteUrl: 'https://personal-portfolio-study.oluwaseyi166.chatgpt.site',
+  siteUrl: 'https://oluwaseyidavid.com',
   portrait: null as {
     src: string;
     alt: string;

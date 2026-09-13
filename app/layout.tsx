@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(founder.siteUrl),
   title: { default: title, template: `%s — ${founder.name}` },
   description: content.description,
-  // Keep the unfinished, owner-private portfolio out of search until launch.
-  robots: { index: false, follow: false },
+  // Only the public hosting build should be indexed.
+  robots: { index: process.env.PORTFOLIO_PUBLIC_BUILD === 'true', follow: true },
   icons: { icon: '/favicon.svg' },
   authors: [{ name: founder.name }],
   openGraph: { title, description: content.description, type: 'website', siteName: founder.name, locale: 'en_NG' },

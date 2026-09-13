@@ -13,6 +13,8 @@ const { d1, r2 } = hostingConfig;
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === 'seatbelt';
 
 const localBindingConfig = {
+  name: 'oluwaseyi-david-portfolio',
+  compatibility_date: '2026-05-15',
   main: 'vinext/server/fetch-handler',
   compatibility_flags: ['nodejs_compat'],
   d1_databases: d1
@@ -45,13 +47,14 @@ export default defineConfig(async () => {
   const { cloudflare } = await import('@cloudflare/vite-plugin');
 
   return {
+    define: { 'process.env.PORTFOLIO_PUBLIC_BUILD': JSON.stringify(process.env.PORTFOLIO_PUBLIC_BUILD ?? 'false') },
     css: { postcss: { plugins: [tailwindcss()] } },
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
     plugins: [
       vinext(),
-      sites(),
+      ...(process.env.PORTFOLIO_PUBLIC_BUILD === 'true' ? [] : [sites()]),
       cloudflare({
         viteEnvironment: { name: 'rsc', childEnvironments: ['ssr'] },
         config: localBindingConfig,
