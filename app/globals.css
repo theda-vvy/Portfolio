@@ -158,3 +158,45 @@
 @media(prefers-reduced-motion:reduce){.showcase-reel .reel-slide,.showcase-reel .reel-slide img,.showcase-reel .showcase-bar{transition:none;transform:none}}
 
 .snapshot-reel{display:block;position:relative;background:transparent}.snapshot-stage{display:grid;aspect-ratio:16/9;overflow:hidden}.snapshot{grid-area:1/1;display:block;width:100%;height:100%;min-width:0;min-height:0;object-fit:contain;opacity:0;transition:opacity 120ms cubic-bezier(.2,.8,.2,1);pointer-events:none}.snapshot.is-active{opacity:1}.snapshot-reel:focus-visible{outline:3px solid #4545e6;outline-offset:5px}@media(prefers-reduced-motion:reduce){.snapshot{transition:none}}
+
+/* More open spacing, with smaller supporting artwork between the larger images. */
+:root{--gutter:clamp(22px,5.5vw,104px);--section-space:clamp(80px,9vw,144px)}
+.home-help,.perspective-section,.capabilities,.approach-section,.relationship-section,.mien-section{padding-block:var(--section-space)}
+.page-intro{padding-top:clamp(60px,7vw,112px);padding-bottom:clamp(56px,6vw,96px)}
+.collection-page{padding-inline:var(--gutter);padding-bottom:var(--section-space)}
+.collection-intro{margin-bottom:80px}.archive-grid{gap:96px 48px}
+.home-how{margin-bottom:var(--section-space)}
+.site-footer{padding-top:88px}.footer-bottom{margin-top:88px}
+.case-overview,.case-outcome{padding-block:var(--section-space)}
+.case-chapter{margin-top:96px;padding-top:32px}
+.case-chapter-heading{margin-bottom:64px}
+.case-chapter .media-stack{gap:64px}
+.chapter-inset .media-stack{width:80%;max-width:960px;gap:64px}
+.project-figure.figure-compact{width:100%;max-width:720px;justify-self:center;margin-inline:auto}
+.project-figure.figure-compact img{max-height:720px;object-fit:contain}
+.extended-gallery{padding-block:var(--section-space);background:var(--background)}
+.extended-gallery-grid{max-width:1040px;padding-top:72px;gap:88px 44px}
+@media(max-width:700px){
+  :root{--section-space:72px}
+  .archive-grid{gap:56px}.collection-intro{margin-bottom:52px}
+  .page-intro{padding-top:44px;padding-bottom:48px}
+  .site-footer{padding-top:64px}.footer-bottom{margin-top:56px}
+  .case-chapter{margin-top:60px;padding-top:20px}.case-chapter-heading{margin-bottom:38px}
+  .case-chapter .media-stack,.chapter-inset .media-stack{gap:40px}
+  .chapter-inset .media-stack{width:100%}
+  .project-figure.figure-compact{width:92%}
+  .extended-gallery-grid{padding-top:44px;gap:48px 24px}
+}
+
+/* Hiring information follows the existing editorial sections. */
+.hire-page .intro-summary{max-width:760px;line-height:1.7}
+.hire-availability{margin-top:28px;color:var(--muted-foreground)}
+.hire-actions{display:flex;align-items:center;flex-wrap:wrap;gap:20px 36px;margin-top:32px}
+.hire-timeline article{padding:32px 0;border-top:1px solid var(--border)}
+.hire-timeline article:first-child{padding-top:0;border-top:0}
+.hire-timeline h2{font-size:clamp(28px,3vw,40px);margin:18px 0}
+.hire-page .relationship-section p:not(.eyebrow){max-width:640px;line-height:1.75}
+.hire-page .relationship-section .text-link{margin-top:24px}
+
+.portrait-slot.has-portrait{padding:0;min-height:0;aspect-ratio:4/5;display:block}
+.portrait-slot.has-portrait>img{width:100%;height:100%;object-fit:cover;object-position:center 65%;border-radius:inherit}

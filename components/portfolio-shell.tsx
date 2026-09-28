@@ -30,6 +30,6 @@ export function SiteHeader() {
 export function SiteFooter() {
   return <footer className="site-footer">
     <div className="footer-top"><p className="eyebrow">Start a conversation</p><a className="contact-title" href="/contact">Tell me<br /><em>what you’re building.</em><span aria-hidden="true"><LinkArrow /></span></a><p className="footer-invitation">{content.contact.body}</p><a className="text-link footer-email" href={`mailto:${founder.email}`}>{founder.email}<span aria-hidden="true"><LinkArrow /></span></a></div>
-    <div className="footer-bottom"><a href="/" className="wordmark">{founder.name}</a><nav aria-label="Footer navigation">{navigation.map(({ label, href }) => <a href={href} key={label}>{label}</a>)}</nav><span className="footer-location">Lagos, Nigeria · {new Date().getFullYear()}</span></div>
+    <div className="footer-bottom"><a href="/" className="wordmark">{founder.name}</a><nav aria-label="Footer navigation">{navigation.map(({ label, href }) => <a href={href} key={label}>{label}</a>)}<a href="/hire">For hiring teams</a></nav><span className="footer-location">Lagos, Nigeria · {new Date().getFullYear()}</span></div>
   </footer>;
 }

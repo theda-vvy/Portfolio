@@ -8,12 +8,7 @@ export const founder = {
   role: 'Independent Designer and Strategist',
   // Verified URL of the existing Sites deployment. This revision remains local.
   siteUrl: 'https://oluwaseyidavid.com',
-  portrait: null as {
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  } | null,
+  portrait: { src: '/images/oluwaseyi-david.jpg', alt: 'Oluwaseyi David wearing a brown cap and a blue striped shirt.', width: 2581, height: 3936 },
   portraitPlaceholder: '[PORTRAIT]',
   socialLinks: [] as { label: string; url: string }[],
 };

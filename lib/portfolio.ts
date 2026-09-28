@@ -4,6 +4,7 @@ import gidigrooveAssets from '@/lib/project-assets/gidigroove-updated.json';
 import wattflexAssets from '@/lib/project-assets/wattflex.json';
 import nabataAssets from '@/lib/project-assets/nabata.json';
 import schleppAssets from '@/lib/project-assets/schlepp-updated.json';
+import schleppProcess from '@/lib/project-assets/schlepp-process.json';
 import evoqueAssets from '@/lib/project-assets/evoque-updated.json';
 import afriforgeAssets from '@/lib/project-assets/afriforge-updated.json';
 
@@ -14,6 +15,7 @@ export type ProjectMedia = {
   height: number;
   caption?: string;
   fit?: 'cover' | 'contain';
+  presentation?: 'compact';
   position?: string;
 };
 export type ProjectStory = {
@@ -89,6 +91,8 @@ export const projects: Project[] = [
     summary:
       'Bringing property, hospitality and everyday care under one clear promise.',
     category: 'Property & hospitality',
+    role: 'Visual identity & guidelines',
+    credits: ['Oluwaseyi David · Visual identity and guidelines', 'Boxless Studio · Verbal identity'],
     theme: 'lime',
     disciplines: [
       'Brand strategy',
@@ -100,59 +104,71 @@ export const projects: Project[] = [
       'Commissioned rebrand. Applications shown as design presentations.',
     cover: media(schleppAssets['application-2'], 'Schlepp billboard with a brick-red message panel and a warm architectural photograph.'),
     hero: media(schleppAssets['header'], 'Wide Schlepp billboard reading Life Looks Better Here beside a warmly lit property.'),
-    identity: media(schleppAssets['19-logo-on-grounds'], 'Schlepp logo shown on evergreen, midnight blue and brick backgrounds.', 'The logo across the core brand colours.'),
-    situationTitle: 'Making property feel easier to live with.',
-    decisionTitle: 'One promise across the business.',
-    identityTitle: 'A clear, dependable identity.',
+    identity: media(schleppProcess['previous-logo'], 'Previous Schlepp identity: a bold lowercase wordmark with a black and orange roof accent.', 'The previous identity · The starting point for the rebrand.'),
+    situationTitle: 'A new audience. A more premium expression.',
+    decisionTitle: 'From choosing a place to focusing on life.',
+    identityTitle: 'Start with something familiar.',
     story: {
-      situation: 'Schlepp brings together property development, hospitality and the care that continues after handover. The rebrand needed to make those different services feel connected.',
-      problem: 'People need more than a well-built property. They need a comfortable stay, clear information and someone to take care of the practical details. The brand had to speak to all of those needs.',
-      question: 'How can the brand make both the property and the care behind it easy to understand?',
-      learning: 'The common thread is peace of mind. Whether someone is buying, staying or managing a property, they want to feel informed and supported.',
-      decision: '“Focus on Life” brings the business together around that need. Schlepp, The Nook and Loadways each have their own role, with related colours, typography and symbols that make the connection clear.',
-      creativeIdea: 'The mountain-shaped symbol suggests shelter and stability. A diagonal opening gives it a distinctive shape, while the wordmark keeps the name easy to read.',
-      outcome: 'The rebrand gives the business a shared set of colours, symbols, language and guidelines. The applications show how that identity can work across property campaigns, guest spaces and day-to-day services.',
+      situation: 'As Schlepp’s audience shifted, the client wanted a more premium-looking brand. The previous identity’s promise of better living remained a useful starting point.',
+      problem: 'The brand also needed to speak beyond real estate: to hospitality, the care of a home and everything in between. The challenge was to give that broader promise a clear visual identity.',
+      question: 'How could the brand express both a place to live and the care that makes living easier?',
+      learning: 'The ambition went beyond helping people find a property. It was about taking care of what surrounds where they live, so they have more time and attention for life itself.',
+      decision: 'Boxless Studio developed the verbal identity around “Focus on Life”. I translated that idea into the visual identity: a system that connects property, hospitality and everyday care.',
+      creativeIdea: 'The roof accent gave the exploration a connection to the existing identity. The proposal brought it out of the wordmark and explored how it could work as a symbol in its own right.',
+      outcome: 'The final guidelines bring the mark, colour, typography and voice into one system. They cover the main brand, its related services and room for a future addition. The applications shown here demonstrate the intended use of that system; they are design presentations, not evidence of a live rollout.',
     },
     chapters: [
       {
-        label: 'Brand architecture', presentation: 'inset',
-        title: 'Three roles, one family.',
-        body: 'Schlepp leads the property business. The Nook looks after the stay. Loadways handles the practical care. Each has a distinct symbol, with a shared visual approach that connects them.',
+        label: 'The exploration', presentation: 'inset',
+        title: 'Give the roof its own presence.',
+        body: 'One proposal route developed the two-part roof into an independent symbol. In the final guidelines, the mark is described as an opened mountain: a form that suggests permanence, with a path through it.',
         layout: 'wide', media: [
-          media(schleppAssets['46-the-nook-in-mono'], 'Schlepp mountain, The Nook hospitality symbol and Loadways umbrella symbol shown together in black.', 'The three symbols, shown together.'),
+          media(schleppProcess['roof-exploration'], 'Proposal exploration showing the roof accent developed into a standalone two-part symbol with bevelled edges.', 'Proposal exploration · One of three routes presented.'),
         ],
       },
       {
-        label: 'Care, made tangible',
-        title: 'From checking in to keeping things running.',
-        body: 'The Nook brings a warm, welcoming presence to guest spaces. Loadways uses clear signs and equipment labels to make the practical side easier to navigate.',
-        layout: 'pair', media: [
-          media(schleppAssets['application-9'], 'The Nook signage on fabric, a reception counter and a guest-room door hanger.', 'The Nook · Hospitality application mockups.'),
-          media(schleppAssets['64-loadways-in-application'], 'Loadways equipment label and plant-room sign in midnight blue.', 'Loadways · Equipment and wayfinding mockups.'),
+        label: 'The final identity', presentation: 'inset',
+        title: 'One mark, different ways to use it.',
+        body: 'The final system gives the mark and name several arrangements, from a full lockup to the symbol alone. This lets the identity fit different spaces without needing a new version each time.',
+        layout: 'wide', media: [
+          media(schleppAssets['17-logo-lockups'], 'Final Schlepp symbol and wordmark shown in five lockup arrangements.', 'Final identity · Logo and lockups.'),
+          media(schleppAssets['19-logo-on-grounds'], 'Schlepp logo on evergreen, midnight blue and brick backgrounds.', 'The logo across the core colours'),
+        ],
+      },
+      {
+        label: 'Colour and typography', presentation: 'inset',
+        title: 'Warmth, with a clear job for each element.',
+        body: 'Evergreen anchors the main brand. Related services have their own colours, while orange has a shared role for actions. Canela brings character to headlines; Manrope keeps everyday information clear.',
+        layout: 'wide', media: [
+          media(schleppAssets['23-colour-palette'], 'Schlepp colour palette with evergreen, midnight slate, brick, clay, orange and warm neutrals.', 'Colour · Shared foundations and distinct service colours.'),
+          { ...media(schleppProcess['typography'], 'Canela Light for headlines and Manrope for body copy, captions and interfaces.', 'Typography · Expression and everyday information.'), presentation: 'compact' },
+          { ...media(schleppAssets['frame-48097198'], 'Designed with everyday living in mind in cream and yellow on a patterned evergreen background.', 'Typography and pattern'), presentation: 'compact' },
+        ],
+      },
+      {
+        label: 'A connected family', presentation: 'inset',
+        title: 'Shared foundations. Room to grow.',
+        body: 'Schlepp, The Nook and Loadways have distinct marks within a shared system. The guidelines also reserve a colour for Dwelling, with its mark left open for future development.',
+        layout: 'wide', media: [
+          media(schleppProcess['brand-family'], 'Schlepp, The Nook and Loadways marks alongside a reserved space for Dwelling, whose mark is not yet developed.', 'Brand family · Three marks and a reserved place for Dwelling.'),
+          media(schleppAssets['46-the-nook-in-mono'], 'Schlepp, The Nook and Loadways symbols in black.', 'The three symbols in one colour.'),
+          media(schleppAssets['48-the-nook-lockup'], 'The Nook logo on cream, evergreen and limestone.', 'The Nook · Logo'),
+          media(schleppAssets['59-loadways-lockup'], 'Loadways logo in midnight blue, white and orange.', 'Loadways · Logo'),
         ],
       },
       {
         label: 'The system in use',
-        title: 'Show the life around the property.',
-        body: 'Warm architectural photography and direct messages give the campaigns a human focus. The colours and typography keep each application recognisably Schlepp.',
+        title: 'From the first impression to the everyday details.',
+        body: 'The applications bring the identity into property campaigns and guest spaces. Warm photography, clear messages and consistent details show how the same promise can take different forms.',
         layout: 'wide', media: [
-          media(schleppAssets['application-2'], 'Outdoor Schlepp billboard with the message A place that feels ready for your next chapter beside an apartment building.', 'Property campaign · Billboard mockup.'),
-        ],
-      },
-      {
-        label: 'Everyday details', presentation: 'object',
-        title: 'An identity people can carry with them.',
-        body: 'The symbol works just as clearly on a small badge, a bag or a cap. These pieces bring the identity into everyday use.',
-        layout: 'wide', media: [
-          media(schleppAssets['application-6'], 'Schlepp badges on yellow fabric, a green bag with a symbol charm and an evergreen cap.', 'Accessories · Merchandise mockups.'),
+          media(schleppAssets['application-9'], 'The Nook signage on fabric, a reception counter and a guest-room door hanger.', 'The Nook · Hospitality application mockups.'),
         ],
       },
     ],
     gallery: [
-      media(schleppAssets['17-logo-lockups'], 'Schlepp wordmark and symbol lockup variations.', 'Logo arrangements'),
-      media(schleppAssets['23-colour-palette'], 'Schlepp palette including evergreen, midnight blue, brick, ochre and orange.', 'Colour palette'),
-      media(schleppAssets['48-the-nook-lockup'], 'The Nook logo on cream, evergreen and limestone.', 'The Nook · Logo'),
-      media(schleppAssets['59-loadways-lockup'], 'Loadways logo in midnight blue, white and orange.', 'Loadways · Logo'),
+      media(schleppAssets['application-2'], 'Schlepp outdoor campaign beside an apartment building.', 'Property campaign · Billboard mockup'),
+      media(schleppAssets['64-loadways-in-application'], 'Loadways equipment label and plant-room sign in midnight blue.', 'Loadways · Equipment and wayfinding mockups'),
+      media(schleppAssets['application-6'], 'Schlepp badges, a green bag and an evergreen cap.', 'Accessories · Merchandise mockups'),
       media(schleppAssets['application'], 'Open Schlepp brochure with property photography and a green welcome panel.', 'Property brochure mockup'),
       media(schleppAssets['application-1'], 'Branded identification cards and lanyards in evergreen and midnight blue.', 'Staff identification mockups'),
       media(schleppAssets['application-3'], 'Mountain-shaped Schlepp pins in a display box, on a lapel and on orange fabric.', 'Symbol pins · Merchandise mockups'),
@@ -164,7 +180,6 @@ export const projects: Project[] = [
       media(schleppAssets['application-11'], 'Stack of evergreen Schlepp business cards with fine gold typography.', 'Business card mockup'),
       media(schleppAssets['frame-48097196'], 'Close view of Schlepp printed stationery on a dark surface.', 'Printed detail'),
       media(schleppAssets['frame-48097197'], 'Overview of Schlepp visual identity elements and applications.', 'Identity overview'),
-      media(schleppAssets['frame-48097198'], 'Designed with everyday living in mind in cream and yellow on a patterned evergreen background.', 'Typography and pattern'),
       media(schleppAssets['frame-48097199'], 'Brick-red Schlepp property card on a cream presentation.', 'Property card mockup'),
     ],
   },

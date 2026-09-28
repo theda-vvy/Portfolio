@@ -16,7 +16,7 @@ export function ProjectCover({ project, large = false }: { project: Project; lar
 }
 
 export function ProjectFigure({ media, className = '' }: { media: ProjectMedia; className?: string }) {
-  return <figure className={`project-figure ${className}`}>
+  return <figure className={`project-figure ${media.presentation === 'compact' ? 'figure-compact' : ''} ${className}`}>
     <Artwork media={media} sizes={className.includes('paired-figure') ? '(max-width: 700px) 100vw, 50vw' : '100vw'} />
     {media.caption && <figcaption className="media-caption">{media.caption}</figcaption>}
   </figure>;
