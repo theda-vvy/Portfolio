@@ -200,3 +200,24 @@
 
 .portrait-slot.has-portrait{padding:0;min-height:0;aspect-ratio:4/5;display:block}
 .portrait-slot.has-portrait>img{width:100%;height:100%;object-fit:cover;object-position:center 65%;border-radius:inherit}
+
+/* Restrained adaptations of useLayouts Discrete Tabs and Get In Touch. */
+.work-category-list .work-category-tab{gap:10px;transition:background 180ms ease,color 180ms ease,border-color 180ms ease;min-height:48px}
+.work-category-tab .category-icon{width:18px;height:18px;transition:transform 260ms cubic-bezier(.22,1,.36,1)}
+.work-category-tab[data-active] .category-icon{transform:rotate(-8deg)}
+.work-category-tab .category-count{font-size:12px;opacity:.65;min-width:1ch;font-variant-numeric:tabular-nums}
+.work-category-list .work-category-tab[data-active]:hover{background:#211b17;color:#f6f5f1}
+.work-categories [data-slot="tabs-content"]{animation:work-panel-in 220ms ease-out}
+@keyframes work-panel-in{from{opacity:.35;transform:translateY(5px)}to{opacity:1;transform:none}}
+.booking-link{display:inline-flex;align-items:center;gap:14px;max-width:100%;padding:8px 18px 8px 8px;min-height:60px;border:1px solid currentColor;border-radius:999px;color:var(--foreground);background:transparent;text-decoration:none;transition:background 200ms ease,color 200ms ease}
+.booking-portrait{display:block;flex:none;width:44px;height:44px;border-radius:50%;overflow:hidden;transition:transform 260ms cubic-bezier(.22,1,.36,1)}
+.booking-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.booking-label{font-size:15px;line-height:1.35}.booking-arrow{display:flex;flex:none;transition:transform 260ms cubic-bezier(.22,1,.36,1)}
+.booking-link:focus-visible{outline:2px solid #4545e6;outline-offset:5px}
+.booking-link:focus-visible,.booking-link:hover{background:#d5ee55;color:#211b17}
+.booking-link:hover .booking-portrait,.booking-link:focus-visible .booking-portrait{transform:rotate(-6deg)}
+.booking-link:hover .booking-arrow,.booking-link:focus-visible .booking-arrow{transform:translate(2px,-2px)}
+.contact-booking{margin-top:26px}.booking-note{display:block;margin-top:12px;font-size:13px;color:var(--muted-foreground)}
+.footer-booking{margin-top:28px}.footer-booking .booking-link{color:inherit}.footer-booking .booking-link:hover,.footer-booking .booking-link:focus-visible{color:#211b17}
+@media(max-width:700px){.work-category-list .work-category-tab{gap:8px;padding:12px 15px}.booking-link{gap:10px;padding-right:14px}.booking-label{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.work-categories [data-slot="tabs-content"]{animation:none}.booking-link,.booking-portrait,.booking-arrow,.work-category-tab .category-icon{transition:none}.booking-link:hover .booking-portrait,.booking-link:focus-visible .booking-portrait,.booking-link:hover .booking-arrow,.booking-link:focus-visible .booking-arrow,.work-category-tab[data-active] .category-icon{transform:none}}

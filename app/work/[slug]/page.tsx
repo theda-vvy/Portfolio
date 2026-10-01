@@ -57,7 +57,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>)}
     </section>
     {project.gallery && <ProjectGallery title={project.title} media={project.gallery} />}
-    <section className="case-outcome"><p className="eyebrow">04 / What changed</p><div><h2>A system to<br /><em>carry forward.</em></h2><p className="case-copy">{story.outcome}</p><div className="credits"><h3 className="eyebrow">Credits & project status</h3>{project.credits.map(credit => <p key={credit}>{credit}</p>)}<p>{project.projectStatus}</p></div></div></section>
+    <section className="case-outcome"><p className="eyebrow">04 / What changed</p><div><h2>A system to<br /><em>carry forward.</em></h2><p className="case-copy">{story.outcome}</p><div className="credits"><h3 className="eyebrow">Credits & project status</h3>{project.credits.map(credit => <p key={credit}>{credit}</p>)}<p>{project.projectStatus}</p></div><a className="text-link" href="/contact">Have something similar in mind? Let’s talk <span aria-hidden="true"><LinkArrow /></span></a></div></section>
     {next && next.slug !== project.slug && <a className="next-project" href={`/work/${next.slug}`}><span className="eyebrow">Next project</span><span className="next-title">{next.title}<span aria-hidden="true"><LinkArrow /></span></span></a>}
   </main>;
 }

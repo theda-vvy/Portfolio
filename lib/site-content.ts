@@ -3,6 +3,7 @@
 export const founder = {
   name: 'Oluwaseyi David',
   email: 'hello@oluwaseyidavid.com',
+  bookingUrl: 'https://calendly.com/hello-oluwaseyidavid/30min',
   city: 'Lagos',
   country: 'Nigeria',
   role: 'Independent Designer and Strategist',

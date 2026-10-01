@@ -1,5 +1,6 @@
 /* oxlint-disable next/no-html-link-for-pages -- Native navigation avoids the deployed Vinext client-router failure. */
 'use client';
+import { Shapes, PanelsTopLeft, Play } from 'lucide-react';
 import { LinkArrow } from '@/components/link-arrow';
 
 
@@ -8,15 +9,15 @@ import { ProjectCover } from '@/components/project-cover';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 const categories = [
-  { id: 'brand', label: 'Brand and visual identity' },
-  { id: 'website', label: 'Website design' },
-  { id: 'motion', label: 'Motion design' },
+  { id: 'brand', label: 'Brand and visual identity', icon: Shapes },
+  { id: 'website', label: 'Website design', icon: PanelsTopLeft },
+  { id: 'motion', label: 'Motion design', icon: Play },
 ] as const;
 
 export function WorkCollection({ projects }: { projects: Project[] }) {
   return <Tabs defaultValue="brand" className="work-categories">
     <TabsList aria-label="Work categories" className="work-category-list">
-      {categories.map(category => <TabsTrigger key={category.id} value={category.id} className="work-category-tab">{category.label}</TabsTrigger>)}
+      {categories.map(category => <TabsTrigger key={category.id} value={category.id} className="work-category-tab"><category.icon aria-hidden="true" className="category-icon" /><span>{category.label}</span><span className="category-count" aria-hidden="true">{projects.filter(project => (project.workCategory ?? 'brand') === category.id).length}</span></TabsTrigger>)}
     </TabsList>
     {categories.map(category => {
       const matching = projects.filter(project => (project.workCategory ?? 'brand') === category.id);
